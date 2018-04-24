@@ -12,7 +12,6 @@
 		696A1A56208F6EB100427AC9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 696A1A54208F6EB100427AC9 /* Main.storyboard */; };
 		696A1A58208F6EB100427AC9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 696A1A57208F6EB100427AC9 /* Assets.xcassets */; };
 		696A1A5B208F6EB100427AC9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 696A1A59208F6EB100427AC9 /* LaunchScreen.storyboard */; };
-		696A1A66208F6EB100427AC9 /* Le_Monde_RSSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 696A1A65208F6EB100427AC9 /* Le_Monde_RSSTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,7 +33,6 @@
 		696A1A5A208F6EB100427AC9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		696A1A5C208F6EB100427AC9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		696A1A61208F6EB100427AC9 /* Le Monde RSSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Le Monde RSSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		696A1A65208F6EB100427AC9 /* Le_Monde_RSSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Le_Monde_RSSTests.swift; sourceTree = "<group>"; };
 		696A1A67208F6EB100427AC9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -77,6 +75,9 @@
 		696A1A4F208F6EB100427AC9 /* Le Monde RSS */ = {
 			isa = PBXGroup;
 			children = (
+				696A1A72208F6F1E00427AC9 /* View */,
+				696A1A71208F6F1100427AC9 /* Model */,
+				696A1A70208F6F0200427AC9 /* Domain */,
 				696A1A50208F6EB100427AC9 /* AppDelegate.swift */,
 				696A1A52208F6EB100427AC9 /* ViewController.swift */,
 				696A1A54208F6EB100427AC9 /* Main.storyboard */,
@@ -90,10 +91,30 @@
 		696A1A64208F6EB100427AC9 /* Le Monde RSSTests */ = {
 			isa = PBXGroup;
 			children = (
-				696A1A65208F6EB100427AC9 /* Le_Monde_RSSTests.swift */,
 				696A1A67208F6EB100427AC9 /* Info.plist */,
 			);
 			path = "Le Monde RSSTests";
+			sourceTree = "<group>";
+		};
+		696A1A70208F6F0200427AC9 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		696A1A71208F6F1100427AC9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		696A1A72208F6F1E00427AC9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -106,6 +127,7 @@
 				696A1A49208F6EB100427AC9 /* Sources */,
 				696A1A4A208F6EB100427AC9 /* Frameworks */,
 				696A1A4B208F6EB100427AC9 /* Resources */,
+				696A1A73208F710800427AC9 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -194,6 +216,22 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		696A1A73208F710800427AC9 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n    swiftlint\nelse\n    echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		696A1A49208F6EB100427AC9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -208,7 +246,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				696A1A66208F6EB100427AC9 /* Le_Monde_RSSTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
