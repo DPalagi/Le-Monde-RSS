@@ -11,8 +11,8 @@ import XCTest
 
 class APIManagerTests: XCTestCase {
 
-    func testRetrieveNewsFeed() {
-        let expectation = self.expectation(description: "API Reponse")
+    func testRetrieveNewsFeed_OK() {
+        let expectation = self.expectation(description: "API Reponse - OK")
 
         APIManager.retrieveNewsFeed(Constants().baseUrl) { (result) in
             switch result {

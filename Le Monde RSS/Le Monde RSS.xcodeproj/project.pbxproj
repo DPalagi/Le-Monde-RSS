@@ -15,6 +15,7 @@
 		6940655720923B92007DE1AC /* NewsItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6940655420923B92007DE1AC /* NewsItem.swift */; };
 		6940655820923B92007DE1AC /* RSSResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6940655520923B92007DE1AC /* RSSResponse.swift */; };
 		6940655B20923BBC007DE1AC /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6940655A20923BBC007DE1AC /* Constants.swift */; };
+		6940655D20923ECA007DE1AC /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6940655A20923BBC007DE1AC /* Constants.swift */; };
 		696A1A51208F6EB100427AC9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 696A1A50208F6EB100427AC9 /* AppDelegate.swift */; };
 		696A1A53208F6EB100427AC9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 696A1A52208F6EB100427AC9 /* ViewController.swift */; };
 		696A1A56208F6EB100427AC9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 696A1A54208F6EB100427AC9 /* Main.storyboard */; };
@@ -35,14 +36,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		6940654A20923A3B007DE1AC /* APIManagerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = APIManagerTests.swift; path = "../../../../../../Desktop/Le-Monde-RSS-develop/Le Monde RSS/Le Monde RSSTests/APIManagerTests.swift"; sourceTree = "<group>"; };
-		6940654D20923B7A007DE1AC /* CompletionModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompletionModel.swift; sourceTree = "<group>"; };
-		6940654E20923B7A007DE1AC /* APIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
-		6940654F20923B7A007DE1AC /* APIError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
-		6940655320923B92007DE1AC /* Channel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Channel.swift; sourceTree = "<group>"; };
-		6940655420923B92007DE1AC /* NewsItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsItem.swift; sourceTree = "<group>"; };
-		6940655520923B92007DE1AC /* RSSResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RSSResponse.swift; sourceTree = "<group>"; };
-		6940655A20923BBC007DE1AC /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		6940654A20923A3B007DE1AC /* APIManagerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIManagerTests.swift; sourceTree = "<group>"; };
+		6940654D20923B7A007DE1AC /* CompletionModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CompletionModel.swift; path = ../API/CompletionModel.swift; sourceTree = "<group>"; };
+		6940654E20923B7A007DE1AC /* APIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = APIManager.swift; path = ../API/APIManager.swift; sourceTree = "<group>"; };
+		6940654F20923B7A007DE1AC /* APIError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = APIError.swift; path = ../API/APIError.swift; sourceTree = "<group>"; };
+		6940655320923B92007DE1AC /* Channel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Channel.swift; path = ../../Model/Domain/Channel.swift; sourceTree = "<group>"; };
+		6940655420923B92007DE1AC /* NewsItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NewsItem.swift; path = ../../Model/Domain/NewsItem.swift; sourceTree = "<group>"; };
+		6940655520923B92007DE1AC /* RSSResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RSSResponse.swift; path = ../../Model/Domain/RSSResponse.swift; sourceTree = "<group>"; };
+		6940655A20923BBC007DE1AC /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Constants.swift; path = ../Model/Constants.swift; sourceTree = "<group>"; };
 		696A1A4D208F6EB100427AC9 /* Le Monde RSS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Le Monde RSS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		696A1A50208F6EB100427AC9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		696A1A52208F6EB100427AC9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -372,6 +373,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6940654B20923A3B007DE1AC /* APIManagerTests.swift in Sources */,
+				6940655D20923ECA007DE1AC /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
