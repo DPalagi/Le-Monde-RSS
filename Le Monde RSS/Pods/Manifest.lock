@@ -1,0 +1,23 @@
+PODS:
+  - Alamofire (4.7.2)
+  - XMLMapper/Core (1.4.4)
+  - XMLMapper/Requests (1.4.4):
+    - Alamofire (~> 4.1)
+    - XMLMapper/Core
+
+DEPENDENCIES:
+  - Alamofire
+  - XMLMapper/Requests
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - Alamofire
+    - XMLMapper
+
+SPEC CHECKSUMS:
+  Alamofire: e4fa87002c137ba2d8d634d2c51fabcda0d5c223
+  XMLMapper: 0ef1de00345e9f34b8d20df3caf90c55ae3e6f1d
+
+PODFILE CHECKSUM: 7763e34a159fd8f4be8061a75f9f268ecda5e439
+
+COCOAPODS: 1.5.0

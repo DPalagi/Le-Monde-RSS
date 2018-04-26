@@ -1,0 +1,15 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+use_frameworks!
+inhibit_all_warnings!
+
+target 'Le Monde RSS' do
+	pod 'Alamofire'
+	pod 'XMLMapper/Requests'
+end
+
+target 'Le Monde RSSTests' do
+    inherit! :search_paths
+
+  end
+
