@@ -21,7 +21,23 @@ class APIManagerTests: XCTestCase {
                 XCTAssertNotNil(channel.title)
                 expectation.fulfill()
             case .error(e: let error):
-                XCTFail("error api: \(error)")
+                XCTFail("API error: \(error)")
+            }
+        }
+        waitForExpectations(timeout: 5, handler: nil)
+    }
+
+    func testFetchFeedNewsEncoding_OK() {
+        let expectation = self.expectation(description: "Encoding response is UTF-8")
+
+        APIManager.fetchNewsFeed(Constants().baseUrl) { (result) in
+            switch result {
+            case .success(object: let channel):
+                XCTAssertTrue(channel.title == "Le Monde.fr - Actualités et Infos en France et dans le monde")
+                expectation.fulfill()
+
+            case .error(e: let error):
+                XCTFail("API error \(error)")
             }
         }
         waitForExpectations(timeout: 5, handler: nil)

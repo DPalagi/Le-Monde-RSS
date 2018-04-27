@@ -13,13 +13,15 @@ class APIManager {
 
     class func fetchNewsFeed(_ url: String, completion: @escaping(CompletionModel<Channel>) -> Void) {
         Alamofire.request(url)
-            .responseXMLObject { (response: DataResponse<RSSResponse>) in
-                guard let rssResponse = response.value,
+            .response(completionHandler: { (response) in
+                guard let data = response.data,
+                    let utf8Data = String(data: data, encoding: .utf8),
+                    let rssResponse = RSSResponse(XMLString: utf8Data),
                     let channel = rssResponse.channel else {
                     completion(.error(e: .invalidXml))
                     return
                 }
                 completion(.success(object: channel))
+            })
         }
     }
-}
