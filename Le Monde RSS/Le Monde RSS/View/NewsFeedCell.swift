@@ -14,8 +14,7 @@ class NewsFeedCell: UITableViewCell {
     @IBOutlet weak var newsImage: UIImageView!
     @IBOutlet weak var newsTitle: UILabel!
 
-    // MARK: - properties
-
+    // MARK: - methods
     override func awakeFromNib() {
         super.awakeFromNib()
     }

@@ -23,6 +23,7 @@ class NewsDetailViewController: UIViewController {
         // Display news content
         newsTitle.text = data?.title
         newsDescription.text = data?.newsDescription
+        newsDescription.sizeToFit()
         let placeHolderImage = UIImage(named: "le_monde_logo")!
         if let imageUrl = data?.image?.imageUrl {
             newsImage?.af_setImage(withURL: URL(string: imageUrl)!, placeholderImage: placeHolderImage)
@@ -35,4 +36,11 @@ class NewsDetailViewController: UIViewController {
         super.didReceiveMemoryWarning()
     }
 
+    @IBAction func openNewsWeb(_ sender: Any) {
+        if let url = data?.linkUrl {
+            UIApplication.shared.open(URL(string: url)!, options: [:]) { (success) in
+                print("Open link: \(url) \n with success: \(success)")
+            }
+        }
+    }
 }

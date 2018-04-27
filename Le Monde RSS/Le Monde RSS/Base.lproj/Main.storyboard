@@ -11,10 +11,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Root View Controller-->
+        <!--Le Monde-->
         <scene sceneID="95e-SU-KLw">
             <objects>
-                <tableViewController id="xod-ij-6Ox" customClass="NewsFeedTableViewController" customModule="Le_Monde_RSS" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController title="Le Monde" id="xod-ij-6Ox" customClass="NewsFeedTableViewController" customModule="Le_Monde_RSS" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Mpq-OH-Clh">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -62,7 +62,7 @@
                             <outlet property="delegate" destination="xod-ij-6Ox" id="vEs-2t-UKm"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="oeF-1n-gzx"/>
+                    <navigationItem key="navigationItem" title="À la Une" id="oeF-1n-gzx"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bra-vc-flP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -89,30 +89,43 @@
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Multiline title" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HZF-ca-YF7">
-                                                <rect key="frame" x="8" y="196" width="359" height="100"/>
+                                                <rect key="frame" x="8" y="196" width="359" height="75"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="100" id="1Vg-JU-hxn"/>
+                                                    <constraint firstAttribute="height" constant="75" id="1Vg-JU-hxn"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Multiline description" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hrQ-q4-pTZ">
-                                                <rect key="frame" x="8" y="304" width="359" height="150"/>
+                                                <rect key="frame" x="8" y="279" width="359" height="120"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="150" id="hG2-VI-kya"/>
+                                                    <constraint firstAttribute="height" constant="120" id="hG2-VI-kya"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="72Y-Tu-8Yd">
+                                                <rect key="frame" x="62" y="407" width="252" height="33"/>
+                                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="17"/>
+                                                <state key="normal" title="Ouvrir dans Safari">
+                                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="openNewsWeb:" destination="Dbb-i8-PYE" eventType="touchUpInside" id="IJx-zD-4L1"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstItem="HZF-ca-YF7" firstAttribute="top" secondItem="hFN-jI-6xf" secondAttribute="bottom" constant="8" id="0fY-Wj-K2D"/>
+                                            <constraint firstItem="72Y-Tu-8Yd" firstAttribute="top" secondItem="hrQ-q4-pTZ" secondAttribute="bottom" constant="8" id="1Nd-dd-cg7"/>
                                             <constraint firstAttribute="trailing" secondItem="HZF-ca-YF7" secondAttribute="trailing" constant="8" id="3gF-0G-2bw"/>
                                             <constraint firstItem="hrQ-q4-pTZ" firstAttribute="leading" secondItem="luw-ed-un6" secondAttribute="leading" constant="8" id="FtF-Ok-52m"/>
+                                            <constraint firstAttribute="trailing" secondItem="72Y-Tu-8Yd" secondAttribute="trailing" constant="61" id="Oqm-Hc-vm5"/>
                                             <constraint firstItem="HZF-ca-YF7" firstAttribute="leading" secondItem="luw-ed-un6" secondAttribute="leading" constant="8" id="Qg4-ga-cFp"/>
+                                            <constraint firstItem="72Y-Tu-8Yd" firstAttribute="leading" secondItem="luw-ed-un6" secondAttribute="leading" constant="62" id="ieR-su-ka6"/>
                                             <constraint firstAttribute="trailing" secondItem="hrQ-q4-pTZ" secondAttribute="trailing" constant="8" id="k4g-pz-zm2"/>
                                             <constraint firstItem="hFN-jI-6xf" firstAttribute="top" secondItem="luw-ed-un6" secondAttribute="top" constant="8" id="miX-Ba-SZD"/>
                                             <constraint firstAttribute="trailing" secondItem="hFN-jI-6xf" secondAttribute="trailing" constant="8" id="ot3-W8-czx"/>
@@ -148,7 +161,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G8C-dZ-oup" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1197.5999999999999" y="18.440779610194905"/>
+            <point key="canvasLocation" x="1197.5999999999999" y="17.733990147783253"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="gIm-7C-5Ju">
