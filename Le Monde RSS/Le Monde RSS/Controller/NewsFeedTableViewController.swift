@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AlamofireImage
 
 class NewsFeedTableViewController: UITableViewController {
 
@@ -55,9 +56,23 @@ class NewsFeedTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-        cell.textLabel?.text = newsItems[indexPath.row].title
+        let cell: NewsFeedCell = tableView.dequeueReusableCell(withIdentifier: "NewsCell", for: indexPath) as! NewsFeedCell
+        let imageView = cell.newsImage
+        let newsFeed = newsItems[indexPath.row]
+
+        cell.newsTitle?.text = newsFeed.title
+        let placeHolderImage = UIImage(named: "le_monde_logo")!
+        if let imageUrl = newsFeed.image?.imageUrl {
+            imageView?.af_setImage(withURL: URL(string: imageUrl)!, placeholderImage: placeHolderImage)
+        } else {
+            imageView?.image = placeHolderImage
+        }
+
         return cell
+    }
+
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 85
     }
 
 }

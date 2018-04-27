@@ -42,4 +42,19 @@ class APIManagerTests: XCTestCase {
         }
         waitForExpectations(timeout: 5, handler: nil)
     }
+
+    func testFetchFeedNewsImageUrl_OK() {
+        let expectation = self.expectation(description: "Image URL is not empty")
+
+        APIManager.fetchNewsFeed(Constants().baseUrl) { (result) in
+            switch result {
+            case .success(object: let channel):
+                XCTAssertNotNil(channel.items[0].image?.imageUrl)
+                expectation.fulfill()
+            case .error(e: _):
+                XCTFail("News image URL is empty")
+            }
+        }
+        waitForExpectations(timeout: 5, handler: nil)
+    }
 }
