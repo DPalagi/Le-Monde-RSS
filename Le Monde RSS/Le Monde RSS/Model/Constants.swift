@@ -9,5 +9,5 @@
 import Foundation
 
 struct Constants {
-    let baseUrl: String = "http://www.lemonde.fr/rss/une.xml"
+    let baseUrl: String = "https://www.lemonde.fr/rss/une.xml"
 }
