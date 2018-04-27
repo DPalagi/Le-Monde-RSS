@@ -39,8 +39,11 @@ class NewsDetailViewController: UIViewController {
     @IBAction func openNewsWeb(_ sender: Any) {
         if let url = data?.linkUrl {
             UIApplication.shared.open(URL(string: url)!, options: [:]) { (success) in
-                print("Open link: \(url) \n with success: \(success)")
+                print("Open link: \(url) with success: \(success)")
             }
+            return
         }
+
+        ErrorHandler.displayErrorMessage(NSLocalizedString("openSafariError", comment: ""))
     }
 }

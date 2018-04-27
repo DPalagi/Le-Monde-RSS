@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		690FE04B2093C2FE0011C052 /* NewsDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 690FE04A2093C2FE0011C052 /* NewsDetailViewController.swift */; };
+		690FE04E2093E61F0011C052 /* Localizables.strings in Resources */ = {isa = PBXBuildFile; fileRef = 690FE0502093E61F0011C052 /* Localizables.strings */; };
 		6940654B20923A3B007DE1AC /* APIManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6940654A20923A3B007DE1AC /* APIManagerTests.swift */; };
 		6940655020923B7A007DE1AC /* CompletionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6940654D20923B7A007DE1AC /* CompletionModel.swift */; };
 		6940655120923B7A007DE1AC /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6940654E20923B7A007DE1AC /* APIManager.swift */; };
@@ -40,6 +41,8 @@
 
 /* Begin PBXFileReference section */
 		690FE04A2093C2FE0011C052 /* NewsDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsDetailViewController.swift; sourceTree = "<group>"; };
+		690FE04F2093E61F0011C052 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizables.strings; sourceTree = "<group>"; };
+		690FE0512093E62F0011C052 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizables.strings; sourceTree = "<group>"; };
 		6940654A20923A3B007DE1AC /* APIManagerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIManagerTests.swift; sourceTree = "<group>"; };
 		6940654D20923B7A007DE1AC /* CompletionModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CompletionModel.swift; path = ../API/CompletionModel.swift; sourceTree = "<group>"; };
 		6940654E20923B7A007DE1AC /* APIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = APIManager.swift; path = ../API/APIManager.swift; sourceTree = "<group>"; };
@@ -182,6 +185,7 @@
 				696A1A57208F6EB100427AC9 /* Assets.xcassets */,
 				696A1A59208F6EB100427AC9 /* LaunchScreen.storyboard */,
 				696A1A5C208F6EB100427AC9 /* Info.plist */,
+				690FE0502093E61F0011C052 /* Localizables.strings */,
 			);
 			path = "Le Monde RSS";
 			sourceTree = "<group>";
@@ -299,6 +303,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				696A1A5B208F6EB100427AC9 /* LaunchScreen.storyboard in Resources */,
+				690FE04E2093E61F0011C052 /* Localizables.strings in Resources */,
 				696A1A58208F6EB100427AC9 /* Assets.xcassets in Resources */,
 				696A1A56208F6EB100427AC9 /* Main.storyboard in Resources */,
 			);
@@ -429,6 +434,15 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		690FE0502093E61F0011C052 /* Localizables.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				690FE04F2093E61F0011C052 /* fr */,
+				690FE0512093E62F0011C052 /* Base */,
+			);
+			name = Localizables.strings;
+			sourceTree = "<group>";
+		};
 		696A1A54208F6EB100427AC9 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
