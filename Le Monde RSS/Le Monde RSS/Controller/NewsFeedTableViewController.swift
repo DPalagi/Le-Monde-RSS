@@ -11,7 +11,11 @@ import UIKit
 class NewsFeedTableViewController: UITableViewController {
 
     // MARK: - Properties
-    var newsItems: [NewsItem] = []
+    var newsItems: [NewsItem] = [] {
+        didSet {
+            self.tableView.reloadData()
+        }
+    }
 
     // MARK: - Events
     override func viewDidLoad() {
@@ -20,8 +24,8 @@ class NewsFeedTableViewController: UITableViewController {
         let refreshControl = UIRefreshControl()
         refreshControl.addTarget(self, action: #selector(loadNewsItems), for: UIControlEvents.valueChanged)
         self.refreshControl = refreshControl
-        // Load first data
-//        refreshControl.beginRefreshing()
+        // First data loading
+        self.loadNewsItems()
     }
 
     override func didReceiveMemoryWarning() {
@@ -34,7 +38,6 @@ class NewsFeedTableViewController: UITableViewController {
             switch response {
             case .success(object: let channel):
                 self.newsItems = channel.items
-                self.tableView.reloadData()
             case.error(e: let error):
                 ErrorHandler.handleApiError(error)
             }
