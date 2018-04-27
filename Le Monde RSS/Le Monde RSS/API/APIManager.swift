@@ -11,7 +11,7 @@ import Alamofire
 
 class APIManager {
 
-    class func retrieveNewsFeed(_ url: String, completion: @escaping(CompletionModel<Channel>) -> Void) {
+    class func fetchNewsFeed(_ url: String, completion: @escaping(CompletionModel<Channel>) -> Void) {
         Alamofire.request(url)
             .responseXMLObject { (response: DataResponse<RSSResponse>) in
                 guard let rssResponse = response.value,

@@ -2,7 +2,7 @@
 //  APIManagerTests.swift
 //  Le Monde RSSTests
 //
-//  Created by Jeremy Benabu on 25/04/2018.
+//  Created by dpalagi on 25/04/2018.
 //  Copyright © 2018 dpalagi. All rights reserved.
 //
 
@@ -14,7 +14,7 @@ class APIManagerTests: XCTestCase {
     func testRetrieveNewsFeed_OK() {
         let expectation = self.expectation(description: "API Reponse - OK")
 
-        APIManager.retrieveNewsFeed(Constants().baseUrl) { (result) in
+        APIManager.fetchNewsFeed(Constants().baseUrl) { (result) in
             switch result {
             case .success(object: let channel):
                 XCTAssertTrue(channel.items.count > 0)
