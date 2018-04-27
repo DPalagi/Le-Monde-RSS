@@ -36,8 +36,7 @@ class NewsFeedTableViewController: UITableViewController {
                 self.newsItems = channel.items
                 self.tableView.reloadData()
             case.error(e: let error):
-                // TODO display error to user
-                print(error)
+                ErrorHandler.handleApiError(error)
             }
             self.refreshControl?.endRefreshing()
         }

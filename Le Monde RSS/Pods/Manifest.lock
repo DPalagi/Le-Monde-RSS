@@ -1,5 +1,8 @@
 PODS:
   - Alamofire (4.7.2)
+  - AlamofireImage (3.3.1):
+    - Alamofire (~> 4.5)
+  - TTGSnackbar (1.7.3)
   - XMLMapper/Core (1.4.4)
   - XMLMapper/Requests (1.4.4):
     - Alamofire (~> 4.1)
@@ -7,17 +10,23 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire
+  - AlamofireImage (~> 3.3)
+  - TTGSnackbar
   - XMLMapper/Requests
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
     - Alamofire
+    - AlamofireImage
+    - TTGSnackbar
     - XMLMapper
 
 SPEC CHECKSUMS:
   Alamofire: e4fa87002c137ba2d8d634d2c51fabcda0d5c223
+  AlamofireImage: 3b35b586853abaf94ca1250f4e94cff3c21a4c0d
+  TTGSnackbar: a66e929fd17d662152ec0964990a86e966310edb
   XMLMapper: 0ef1de00345e9f34b8d20df3caf90c55ae3e6f1d
 
-PODFILE CHECKSUM: 7763e34a159fd8f4be8061a75f9f268ecda5e439
+PODFILE CHECKSUM: ca18a42fe260a19e1131e1c6da824513a35b5ca3
 
 COCOAPODS: 1.5.0

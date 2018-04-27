@@ -1,11 +1,12 @@
-# Uncomment the next line to define a global platform for your project
-# platform :ios, '9.0'
+platform :ios, '10.0'
 use_frameworks!
 inhibit_all_warnings!
 
 target 'Le Monde RSS' do
 	pod 'Alamofire'
+    pod 'AlamofireImage', '~> 3.3'
 	pod 'XMLMapper/Requests'
+    pod 'TTGSnackbar'
 end
 
 target 'Le Monde RSSTests' do
