@@ -27,7 +27,7 @@ class APIManagerTests: XCTestCase {
         waitForExpectations(timeout: 5, handler: nil)
     }
 
-    func testFetchFeedNewsEncoding_OK() {
+    func testFeedNewsEncoding_OK() {
         let expectation = self.expectation(description: "Encoding response is UTF-8")
 
         APIManager.fetchNewsFeed(Constants().baseUrl) { (result) in
@@ -43,7 +43,7 @@ class APIManagerTests: XCTestCase {
         waitForExpectations(timeout: 5, handler: nil)
     }
 
-    func testFetchFeedNewsImageUrl_OK() {
+    func testFeedNewsImageUrl_OK() {
         let expectation = self.expectation(description: "Image URL is not empty")
 
         APIManager.fetchNewsFeed(Constants().baseUrl) { (result) in

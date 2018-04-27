@@ -11,14 +11,16 @@ import AlamofireImage
 
 class NewsFeedTableViewController: UITableViewController {
 
-    // MARK: - Properties
+    // MARK: - properties
     var newsItems: [NewsItem] = [] {
         didSet {
             self.tableView.reloadData()
         }
     }
 
-    // MARK: - Events
+    var selectedNews: NewsItem?
+
+    // MARK: - events
     override func viewDidLoad() {
         super.viewDidLoad()
         // Bind pull to refresh
@@ -33,7 +35,19 @@ class NewsFeedTableViewController: UITableViewController {
         super.didReceiveMemoryWarning()
     }
 
-    // MARK: - Methods
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "detailSegue" {
+
+            if let indexPath = self.tableView.indexPathForSelectedRow {
+                let selectedNews = newsItems[indexPath.row]
+                let detailViewController = segue.destination as! NewsDetailViewController
+
+                detailViewController.data = selectedNews
+            }
+        }
+    }
+
+    // MARK: - methods
     @objc func loadNewsItems() {
         APIManager.fetchNewsFeed(Constants().baseUrl) { (response) in
             switch response {

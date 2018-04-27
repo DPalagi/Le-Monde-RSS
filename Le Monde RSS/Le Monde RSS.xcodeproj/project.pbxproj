@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		690FE04B2093C2FE0011C052 /* NewsDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 690FE04A2093C2FE0011C052 /* NewsDetailViewController.swift */; };
 		6940654B20923A3B007DE1AC /* APIManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6940654A20923A3B007DE1AC /* APIManagerTests.swift */; };
 		6940655020923B7A007DE1AC /* CompletionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6940654D20923B7A007DE1AC /* CompletionModel.swift */; };
 		6940655120923B7A007DE1AC /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6940654E20923B7A007DE1AC /* APIManager.swift */; };
@@ -38,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		690FE04A2093C2FE0011C052 /* NewsDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsDetailViewController.swift; sourceTree = "<group>"; };
 		6940654A20923A3B007DE1AC /* APIManagerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIManagerTests.swift; sourceTree = "<group>"; };
 		6940654D20923B7A007DE1AC /* CompletionModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CompletionModel.swift; path = ../API/CompletionModel.swift; sourceTree = "<group>"; };
 		6940654E20923B7A007DE1AC /* APIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = APIManager.swift; path = ../API/APIManager.swift; sourceTree = "<group>"; };
@@ -142,6 +144,7 @@
 			isa = PBXGroup;
 			children = (
 				69406561209244EB007DE1AC /* NewsFeedTableViewController.swift */,
+				690FE04A2093C2FE0011C052 /* NewsDetailViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -391,6 +394,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				690FE04B2093C2FE0011C052 /* NewsDetailViewController.swift in Sources */,
 				6940655120923B7A007DE1AC /* APIManager.swift in Sources */,
 				6940655720923B92007DE1AC /* NewsItem.swift in Sources */,
 				6940655620923B92007DE1AC /* Channel.swift in Sources */,
