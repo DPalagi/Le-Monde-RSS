@@ -13,6 +13,6 @@ As it's an iOS Swift 4 project, you're gonna need:
 ## Usage
 - `git clone` the project
 - `pod install` into the "Le Monde RSS" folder, not the root one
-- `open Le\ Monde\ RSS.xcworkspace' and xCode should launch the project with the dependencies correctly
+- `open Le\ Monde\ RSS.xcworkspace` and xCode should launch the project with the dependencies correctly
 - run the project on Simulator or Device
 - enjoy
